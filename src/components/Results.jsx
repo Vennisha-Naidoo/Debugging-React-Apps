@@ -1,8 +1,10 @@
 import { calculateInvestmentResults, formatter } from '../util/investment.js';
 
+//this const has been moved out of the Result function- the error/incorrect output is the rows of data not updating, rather adding more rows
+const results = [];
 
 export default function Results({ input }) {
-  const results = [];
+
   calculateInvestmentResults(input, results);
 
   if (results.length === 0) {
