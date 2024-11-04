@@ -1,9 +1,12 @@
 import { calculateInvestmentResults, formatter } from '../util/investment.js';
 
-//this const has been moved out of the Result function- the error/incorrect output is the rows of data not updating, rather adding more rows
-const results = [];
+//this const has been moved out of the Result function- the error/incorrect output is the rows of data not updating, rather adding more rows, when changing values
+// const results = [];
 
 export default function Results({ input }) {
+
+  //By moving array into the component, a new array is re-created every time the component is executed
+  const results = [];
 
   calculateInvestmentResults(input, results);
 
